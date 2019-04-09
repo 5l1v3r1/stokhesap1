@@ -1,0 +1,28 @@
+#Kaptırma oranı: çevrimiçi bir perakendeci için kaptırma oranı müşterilerin markanızdan ne kadar hızlı sürede ayrıldığını gösteren göstergedir.
+#Kaptırma oranını hesaplayan bir uygulama yazın.
+#Kullanılacaklar= listeler, fonksiyonlar, input ve while
+
+kazMusteriler = []
+kayMusteriler = []
+
+while True:
+    print("Abone olmak istiyorsanız '1' Çıkmak istiyorsanız '2' seçeneğini seçiniz.")
+    islem=int(input("İşlem Seçiniz:"))
+    if islem ==1:
+        kazMusteriler.append(islem)
+        def oran (kazMusteriler,kayMusteriler):
+            oran = kayMusteriler/(kazMusteriler+kayMusteriler)
+            return oran
+        a=len(kazMusteriler)
+        b=len(kayMusteriler)
+        o=oran(a,b)
+        print("Gelen müşteri sayısı:",a,"Kaybedilen müşteri sayısı",b,"Kaptırma Oranı:",o)
+    else:
+        kayMusteriler.append(islem)
+        def oran (kazMusteriler,kayMusteriler):
+            oran = kayMusteriler/(kazMusteriler+kayMusteriler)
+            return oran
+        a=len(kazMusteriler)
+        b=len(kayMusteriler)
+        o=oran(a,b)
+        print("Gelen müşteri sayısı:",a,"Kaybedilen müşteri sayısı",b,"Kaptırma Oranı:",o)
