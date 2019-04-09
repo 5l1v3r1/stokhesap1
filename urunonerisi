@@ -1,0 +1,17 @@
+#ürün öneren uygulama yazınız.
+
+urunler = []
+arananUrun = []
+
+while True:
+    arananUrun=input("Aradığınız ürünü giriniz:")
+    urunler.append(arananUrun)
+    if arananUrun =="ayakkabı":
+        if urunler.count("ayakkabı")>2:
+            print("Önerilen ürün:Çorap")
+    elif arananUrun=="pasta":
+        if urunler.count("pasta")>2:
+            print("Önerilen ürün:Mum")
+    elif arananUrun == "araba":
+        if urunler.count("araba")>2:
+            print("Önerilen ürün:Lastik")
