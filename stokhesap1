@@ -1,0 +1,37 @@
+#İşletmenin dönem başı, dönem sonu stok miktarını ve dönem ortalamasını bulunuz. DEF
+koltuk=1250
+yatak=850
+dolap=500
+
+def donemBasi (koltuk,yatak,dolap):
+    donembasi=(koltuk+yatak+dolap)
+    return donembasi
+
+def toplamUretim (uKoltuk,uYatak,uDolap):
+    toplamuretim=(uKoltuk+uYatak+uDolap)
+    return  toplamuretim
+
+def donemSonu (donemBasi,toplamUretim,satilanYatak,satilanKoltuk,satilanDolap):
+    donemsonu=(donemBasi+toplamUretim-(satilanYatak+satilanDolap+satilanKoltuk))
+    return donemsonu
+
+def donemOrtalamasi (donemBasi,donemSonu):
+    donemortalamasi=((donemBasi+donemSonu)/2)
+    return  donemortalamasi
+
+uKoltuk=int(input("Üretilen Koltuk Sayısı:"))
+uYatak=int(input("Üretilen Yatak Satısı:"))
+uDolap=int(input("Üretilen Dolap Sayısı:"))
+satilanYatak=int(input("Satılan Yatak Sayısı"))
+satilanDolap=int(input("Satılan Dolap Sayısı:"))
+satilanKoltuk=int(input("Satılan Koltuk Sayısı:"))
+
+a=donemBasi (koltuk,yatak,dolap)
+b=toplamUretim (uKoltuk,uYatak,uDolap)
+c=donemSonu (a,b,satilanYatak,satilanKoltuk,satilanDolap)
+d=donemOrtalamasi(a,c)
+
+print("Dönem Başı Stoğunuz:",a)
+print("Toplam Üretiminiz:",b)
+print("Dönem Sonu Stoğunuz:",c)
+print("Dönem Ortalamanız",d)
