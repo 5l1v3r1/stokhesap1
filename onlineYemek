@@ -1,0 +1,37 @@
+#Online yemek siparisi veren bir e ticaret sitesi telefon
+#aracılığıyla musterilerden siparisleri hakkında yardım talebi almaktadır.
+#Her bir talep ve cevap sayısı için toplamda 2 adet veri girişi yapılması gerekmektedir.
+#her bir talep için veri girişi olarak 1 girilmesi gerekir. Eğer talepe cevap verildiyse
+#cevap sayısı olarak 1 verilmediyse 0 olarak girilmesi gerekir. Günlük taleplere verilen cevap
+#sayısınin toplam taleplere oranı %80 in altına düşerse departman yöneticisine bildirim yapılması gerekir.
+#Buna göre bu oran %80 den az olduğu sürece python koduyla yazınız.
+
+cevaplar=[]
+cevapsizlar=[]
+
+while True:
+    print("Cevap verildiyse '1' Verilmediyse '0' yazınız.")
+    islem=int(input("CEVAP VERİLDİ Mİ?"))
+    if islem ==1:
+        cevaplar.append(islem)
+        def oran (cevaplar,cevapsizlar):
+            oran=cevaplar/(cevaplar+cevapsizlar)
+            return oran
+        a=len(cevaplar)
+        b=len(cevapsizlar)
+        o=oran(a,b)
+        print("Talebe verilen cevap sayısı:",a,"Talebe verilmeyen cevap sayısı:",b,"Cevap Oranı:",o)
+        if o<0.8:
+            print("YÖNETİCİYE HABER VERİN!!!!")
+
+    else:
+        cevapsizlar.append(islem)
+        def oran (cevaplar,cevapsizlar):
+            oran=cevaplar/(cevaplar+cevapsizlar)
+            return oran
+        a=len(cevaplar)
+        b=len(cevapsizlar)
+        o=oran(a,b)
+        print("Talebe verilen cevap sayısı:",a,"Talebe verilmeyen cevap sayısı:",b,"Cevap Oranı:",o)
+        if o<0.8:
+            print("YÖNETİCİYE HABER VERİN!!!!")
