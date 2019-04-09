@@ -1,0 +1,11 @@
+#Bir işletmenin 2017 senesinde stok miktarı 10000dir her ay 500 adet satış yapılıyor ve 100 adet üretim yapılıyor. İşletmenin stok sıfırlaması ne zaman olur
+
+stok=10000
+ay=1
+
+while True:
+    stok=stok-400
+    if stok ==0:
+        print("Stok sıfırlamasının gerçekleştiği ay:",ay)
+        break
+    ay=ay+1
