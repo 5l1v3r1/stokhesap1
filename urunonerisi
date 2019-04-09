@@ -15,3 +15,38 @@ while True:
     elif arananUrun == "araba":
         if urunler.count("araba")>2:
             print("Önerilen ürün:Lastik")
+
+************************************************************************************************
+
+urunlerSpor=["nikekosu","adidaskosu","pumakosu","reebokkosu"]
+urunlerKlasik=["hotiç","inci","mango"]
+urunlerBasketbol=["nikebasket","adidasbasket","jordanbasket"]
+urunlerSneak=["nikesneak","adidassneak","vans","balenciaga"]
+
+bakilanUrun=[]
+print("Urunlerimiz:",urunlerBasketbol,urunlerKlasik,urunlerSneak,urunlerSpor)
+while True:
+    secim=input("Aradığınız ürünü yazınız: (çıkış için exit yazınız.)")
+    for i in urunlerSpor:
+        if secim>==i:
+            urunlerSpor.remove(secim)
+            bakilanUrun.append(secim)
+            print("Sizin için önerimiz:",urunlerSpor)
+    for i in urunlerKlasik:
+        if secim==i:
+            urunlerKlasik.remove(secim)
+            bakilanUrun.append(secim)
+            print("Sizin için önerimiz:",urunlerKlasik)
+    for i in urunlerBasketbol:
+        if secim==i:
+            urunlerBasketbol.remove(secim)
+            bakilanUrun.append(secim)
+            print("Sizin için önerimiz:",urunlerBasketbol)
+    for i in urunlerSneak:
+        if secim==i:
+            urunlerSneak.remove(secim)
+            bakilanUrun.append(secim)
+            print("Sizin için önerimiz:", urunlerSneak)
+    if secim=="exit":
+        break
+
